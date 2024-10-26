@@ -8,4 +8,6 @@ IntelliJ IDEA Ultimate'de Gelir-gider raporları - Java web API
 
 ## Referanslar
 
-https://medium.com/@cihanasan1/intellij-idea-ultimatede-gelir-gider-raporlar%C4%B1-java-web-api-08758f76b590
+1. Ders : https://medium.com/@cihanasan1/intellij-idea-ultimatede-gelir-gider-raporlar%C4%B1-java-web-api-08758f76b590
+
+2. Ders : https://medium.com/@cihanasan1/intellij-idea-ultimatede-spring-boot-basic-authentication-f22a2b8e3a5a

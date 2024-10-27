@@ -18,6 +18,11 @@ public class Transaction {
     // "income" veya "expense" olarak iki tür olabilir
     private String type;
 
+    // Kullanıcı ile ilişki
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
     // Getters ve Setters
     public Long getId() {
         return id;
@@ -57,5 +62,13 @@ public class Transaction {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

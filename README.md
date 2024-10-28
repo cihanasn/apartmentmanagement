@@ -13,3 +13,5 @@ IntelliJ IDEA Ultimate'de Gelir-gider raporları - Java web API
 2. Ders : https://medium.com/@cihanasan1/intellij-idea-ultimatede-spring-boot-basic-authentication-f22a2b8e3a5a
 
 3. Ders : https://medium.com/@cihanasan1/intellij-idea-ultimatede-gelir-gider-raporlar%C4%B1-java-web-api-ders-3-e0f0bfae63a4
+
+4. Ders : https://medium.com/@cihanasan1/validated-ve-valid-anotasyonu-global-exception-handler-java-intellij-idea-ultimatede-ders-8cecc7fd394f

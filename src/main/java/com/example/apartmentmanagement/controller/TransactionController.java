@@ -5,8 +5,10 @@ import com.example.apartmentmanagement.model.User;
 import com.example.apartmentmanagement.request.TransactionRequest;
 import com.example.apartmentmanagement.service.TransactionService;
 import com.example.apartmentmanagement.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/transactions")
+@Validated
 public class TransactionController {
 
     private final TransactionService transactionService;
@@ -41,7 +44,7 @@ public class TransactionController {
 
     // Yeni bir transaction kaydeden endpoint
     @PostMapping
-    public ResponseEntity<Transaction> createTransaction(@RequestBody TransactionRequest transactionRequest) {
+    public ResponseEntity<Transaction> createTransaction(@Valid @RequestBody TransactionRequest transactionRequest) {
         Optional<User> optionalUser = userService.getUserById(transactionRequest.getUserId());
         if (optionalUser.isPresent()) {
             Transaction transaction = new Transaction();
@@ -60,7 +63,7 @@ public class TransactionController {
 
     // Bir transaction güncelleyen endpoint
     @PutMapping("/{id}")
-    public ResponseEntity<Transaction> updateTransaction(@PathVariable Long id, @RequestBody TransactionRequest transactionRequest) {
+    public ResponseEntity<Transaction> updateTransaction(@PathVariable Long id, @Valid @RequestBody TransactionRequest transactionRequest) {
         return transactionService.getTransactionById(id)
                 .map(existingTransaction -> {
                     Optional<User> optionalUser = userService.getUserById(transactionRequest.getUserId());
